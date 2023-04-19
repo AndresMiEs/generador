@@ -1,0 +1,144 @@
+/* Fuentes */
+@font-face {
+  font-family: "Caslon Antique";
+  src: url(./Fonts/CaslonAntique.ttf) format("truetype"), url(./Fonts/CaslonAntique-Bold.ttf) format("truetype");
+}
+
+/* Estilos generales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("../css/Img/descarga (1).jfif") no-repeat center center fixed;
+  background-size: cover;
+  color: #d4af37;
+  font-family: "Caslon Antique", sans-serif;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  
+  
+}
+
+
+/* Estilos del encabezado */
+h1 {
+  color: #d4af37;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 2px 2px 2px #000;
+  text-transform: uppercase;
+}
+/* Define las propiedades para los elementos de entrada de texto */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    margin: 0 auto;
+    max-width: 700px;
+    padding: 50px;
+    text-align: left;
+  }
+}
+
+
+/* Estilos de las etiquetas */
+label {
+  font-family: "Caslon Antique", sans-serif;
+  display:block;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  background-color: #222;
+  text-align: center;
+  border: 5px solid #c19e5d;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 0px 10px #8b0000;
+  transition: box-shadow 0.2s ease-in-out;
+  border-image: linear-gradient(to right, #8b6c42, #ffd700) 1;
+  border-image-slice: 1;
+}
+
+
+/* Estilos de los campos de entrada */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  font-family: "Caslon Antique", sans-serif;
+  font-size:1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px #c19e5d;
+}
+
+/* Estilos de los botones */
+.btn {
+  font-family: "Caslon Antique", sans-serif;
+  font-size: 20px;
+  display: inline-block;
+  margin: 20px;
+  margin-top: 10px;
+  background-color: #333; 
+  color: #fff; 
+  border: 2px solid gold; 
+  border-radius: 4px;
+  padding: 8px 16px; /* ajustamos el padding para reducir el tamaño */
+}
+
+.btn:hover {
+  background-color: gold;
+  font-weight: bold;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 0px 0px 20px #8b0000;
+}
+
+
+.btn:focus,
+.btn:hover {
+  background-color: gold;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 0px 0px 20px #8b0000;
+  border-color: #d4af37;
+  transition: border-color 0.2s ease-in-out;
+}
+
+
+.btn:focus {
+  outline: none;
+  border-color: #d4af37;
+}
+
+
+  
+
+

@@ -1,0 +1,56 @@
+/*Estilo para la entrada y muestra de datos*/
+.container-datos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+  
+.container-datos label {
+  display: block;
+  max-width: 10rem;
+  margin: 20px 20px 20px 20px;
+  text-align: left;
+
+  text-align: center;
+
+}
+
+.container-datos label:hover {
+  box-shadow: 0px 0px 10px #8b0000;
+}
+
+.container-datos input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  box-shadow: inset 0px 0px 5px #888;
+}
+
+.container-datos input[type=submit] {
+  background-color: #222;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px #888;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.container-datos input[type=submit]:hover {
+  box-shadow: 0px 0px 10px #8b0000;
+}
+
+.container-datos label,
+.container-datos input,
+.container-datos button {
+  flex: 0 0 calc(25% - 10px);
+  margin-bottom: 10px;
+}

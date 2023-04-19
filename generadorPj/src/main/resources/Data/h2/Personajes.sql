@@ -1,0 +1,23 @@
+CREATE TABLE personajes (
+    id INT PRIMARY KEY,
+    nombre VARCHAR(50),
+    apellido VARCHAR(50),
+    sexo CHAR(1),
+    raza_id INT,
+    profesion_id INT,
+    ha INT,
+    hp INT,
+    f INT,
+    r INT,
+    ini INT,
+    ag INT,
+    des INT,
+    i INT,
+    v INT,
+    em INT,
+    color_pelo VARCHAR(50),
+    color_ojos VARCHAR(50),
+    edad INT,
+    FOREIGN KEY (profesion_id) REFERENCES profesiones(id),
+    FOREIGN KEY (raza_id) REFERENCES razas(id)
+);

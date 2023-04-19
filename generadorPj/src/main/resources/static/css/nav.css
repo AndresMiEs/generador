@@ -1,0 +1,135 @@
+nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(15, 13, 13, 0.784);
+  font-family: "Caslon Antique", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  position: fixed; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #d4af37;
+  text-decoration: none;
+}
+
+.main-menu {
+  height: 50px;
+}
+
+.main-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.main-menu li {
+  margin: 0 10px;
+}
+
+.main-menu li a {
+  display: block;
+  padding: 20px;
+  color: #d4af37;
+  text-align: center;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.main-menu li a:hover,
+.main-menu li a:focus {
+  color: #ff5722;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .main-menu {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 50px);
+    background-color: rgba(15, 13, 13, 0.784);
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
+  }
+
+  .main-menu ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .main-menu li {
+    margin: 10px 0;
+  }
+
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu-icon span {
+    height: 2px;
+    width: 24px;
+    background-color: #fff;
+    margin-bottom: 4px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu-icon.active span:first-child {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .menu-icon.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-icon.active span:last-child {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  .main-menu.show {
+    transform: translateX(0%);
+  }
+
+  .menu-icon.show span {
+    background-color: #d4af37;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+}

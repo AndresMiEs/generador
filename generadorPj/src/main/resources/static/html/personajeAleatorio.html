@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Personaje aleatorio</title>
+    <link rel="stylesheet" href="../css/generador.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/tabla-stats.css">
+    <link rel="stylesheet" href="../css/titulo.css">
+    <link rel="stylesheet" href="../css/container-select.css">
+    <link rel="stylesheet" href="../css/container-datos.css">
+    
+</head>
+
+<body>
+<header class="body-container" id="main-header">
+    <nav class="main-menu">
+      <div class="menu-icon">
+      <button>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      </div>
+      <ul>
+        <li><a href="http://localhost:8080/">Inicio</a></li>
+        <li><a href="http://localhost:8080/">Generador de personajes</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+    <div class="titulo">
+    <h1 class="Forja">Generador de Personajes</h1>
+    </div>
+    <div class="container-datos">
+    <label for="raza" id="raza">Raza: <span class="stat-value" id="Raza" th:text="${personaje.nombreRaza}"></span></label>
+    <label for="Clase" id="Clase">Clase: <span class="stat-value" id="Clase" th:text="${claseProfesion}"></span></label>
+    <label for="Profesion" id="Profesion">Profesión: <span class="stat-value" id="Profesion" th:text="${nombreProfesion}"></span></label>
+	</div>
+   
+    
+    <div class="container-stats">
+
+    <label for="stats" id="stats">Características:</label>
+        <table id="tabla-stats">
+          <tr>
+            <th>Atributo</th>
+            <td><span class="stat-name" title="Habilidad de Armas - Determina la habilidad de vuestro personaje en combate cuerpo a cuerpo">HA</span></td>
+            <td><span class="stat-name" title="Habilidad de Proyectiles - Determina que tan bueno es tu personaje con armas a distancia">HP</span></td>
+            <td><span class="stat-name" title="Fuerza - Determina la fuerza física de nuestro personaje y cuanto daño puede hacer de un golpe">F</span></td>
+            <td><span class="stat-name" title="Resistencia - Determina cuantos golpes puede resistir nuestro personaje así cómo su capacidad de soportar adversidades">R</span></td>
+            <td><span class="stat-name" title="Iniciativa - Determina el orden en el que los personajes actúan en el combate">Ini</span></td>
+            <td><span class="stat-name" title="Agilidad - Determina la velocidad y la capacidad de movimiento de nuestro personaje">Ag</span></td>
+            <td><span class="stat-name" title="Destreza - Determina la precisión y la habilidad de nuestro personaje para realizar acciones físicas">Des</span></td>
+			<td><span class="stat-name" title="Inteligencia - Determina la capacidad mental de nuestro personaje y su habilidad para realizar acciones intelectuales">I</span></td>
+			<td><span class="stat-name" title="Voluntad - Determina la fuerza de voluntad de nuestro personaje y su capacidad para resistir efectos mentales o emocionales">V</span></td>
+			<td><span class="stat-name" title="Empatía - Determina la capacidad de nuestro personaje para entender y comunicarse con otras personas">Em</span></td>
+          </tr>
+          <tr>
+            <th>Valor</th>
+            <td th:text="${personaje.ha}"><span class="stat-value" id="HA"></span></td>
+            <td th:text="${personaje.hp}"><span class="stat-value" id="HP"></span></td>
+            <td th:text="${personaje.fuerza}"><span class="stat-value" id="F"></span></td>
+            <td th:text="${personaje.resistencia}"><span class="stat-value" id="R"></span></td>
+            <td th:text="${personaje.iniciativa}"><span class="stat-value" id="Ini"></span></td>
+            <td th:text="${personaje.agilidad}"><span class="stat-value" id="Ag"></span></td>
+            <td th:text="${personaje.destreza}"><span class="stat-value" id="Des"></span></td>
+            <td th:text="${personaje.inteligencia}"><span class="stat-value" id="I"></span></td>
+            <td th:text="${personaje.voluntad}"><span class="stat-value" id="V"></span></td>
+            <td th:text="${personaje.carisma}"><span class="stat-value" id="Em"></span></td>
+          </tr>
+        </table>
+      </div>
+     <div class="container">
+      <button class= "btn" onclick="window.location.reload();">Generar nuevo personaje</button>
+      <button class= "btn" onclick="window.location.href = 'http://localhost:8080/';">Volver a Generador</button>
+      
+	</div>
+      
+</body>
+
+</html>
+
+

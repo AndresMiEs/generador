@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Personajes</title>
+    <link rel="stylesheet" href="../css/generador.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/tabla-stats.css">
+    <link rel="stylesheet" href="../css/titulo.css">
+</head>
+<body>
+  <header class="body-container" id="main-header">
+    <nav class="main-menu">
+      <div class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Generador de personajes</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+    <div class="titulo">
+    <h1 class="Forja">Generador de Personajes</h1>
+    </div>
+    
+  <div class="container">
+    <form action="" id="creadorPj">
+        
+      <div class="container-select">
+        <label for="raza" id="raza">Raza:</label>
+        <select name="raza" id="raza">
+            <option value="humano">Humano</option>
+            <option value="enano">Enano</option>
+            <option value="elfoA">Alto Elfo</option>
+            <option value="elfoS">Elfo Silvano</option>
+            <option value="mediano">Mediano</option>
+            <option value="gnomo">Gnomo</option>
+        </select>
+        <label for="genero">Género</label>
+        <select name="genero" id="genero">
+            <option value="hombre">Hombre</option>
+            <option value="mujer">Mujer</option>
+        </select>
+        <div class="text-center">
+  <button type="button" class="btn" onclick="generarPersonajeAleatorio()">Generar Personaje Aleatorio</button>
+</div>
+        
+      <div class="container-datos">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nameInput" id="nameInput">
+        <button type="button" class="btn" onclick="generarNombre()">Generar</button>
+        <button type="submit" class="btn" onclick="">Enviar</button>
+        
+        <label for="edad" id="edad">Edad:</label>
+        <input type="text" name="edadInput" id="edadInput">
+        <button type="button" class="btn" onclick="generarEdad()">Generar</button>
+        <button type="submit" class="btn" onclick="">Enviar</button>
+        
+        <label for="ojos" id="ojos">Color de Ojos:</label>
+        <input type="text" name="ojosInput" id="ojosInput">
+        <button type="button" class="btn" onclick="generarOjos()">Generar</button>
+        <button type="submit" class="btn" onclick="">Enviar</button>
+        
+        <label for="pelo" id="pelo">Color de Pelo:</label>
+        <input type="text" name="peloInput" id="peloInput">
+        <button type="button" class="btn" onclick="generarPelo()">Generar</button>
+        <button type="submit" class="btn" onclick="">Enviar</button>
+        
+       <!-- <label for="marca" id="marca">Marca Distintiva:</label>
+        <input type="text" name="pintaInput" id="pintaInput">
+        <button type="button" class="btn" onclick="generarPinta()">Generar</button> 
+        
+        <label for="class" id="class">Clase</label>
+        <input type="text" name="classInput" id="classInput">
+        <button type="button" class="btn" onclick="generarClase()">Generar</button>-->
+      </div>
+        
+      <div class="container-stats">
+        <label for="stats" id="stats">Características:</label>
+        <!-- <input type="text" name="statsInput" id="statsInput"> -->
+        <table id="tabla-stats">
+          <tr>
+            <th>Atributo</th>
+            <td><span class="stat-name">HA</span></td>
+            <td><span class="stat-name">HP</span></td>
+            <td><span class="stat-name">F</span></td>
+            <td><span class="stat-name">R</span></td>
+            <td><span class="stat-name">Ini</span></td>
+            <td><span class="stat-name">Ag</span></td>
+            <td><span class="stat-name">Des</span></td>
+            <td><span class="stat-name">I</span></td>
+            <td><span class="stat-name">V</span></td>
+            <td><span class="stat-name">Em</span></td>
+          </tr>
+          <tr>
+            <th>Valor</th>
+            <td><span class="stat-value" id="HA">${ha}</span></td>
+            <td><span class="stat-value" id="HP">${hp}</span></td>
+            <td><span class="stat-value" id="F">${fuerza}</span></td>
+            <td><span class="stat-value" id="R">${resistencia}</span></td>
+            <td><span class="stat-value" id="Ini">${iniciativa}</span></td>
+            <td><span class="stat-value" id="Ag">${agilidad}</span></td>
+            <td><span class="stat-value" id="Des">${destreza}</span></td>
+            <td><span class="stat-value" id="I">${inteligencia}</span></td>
+            <td><span class="stat-value" id="V">${voluntad}</span></td>
+            <td><span class="stat-value" id="Em">${carisma}</span></td>
+          </tr>
+        </table>
+      </div> 
+        <button type="button"  id= "statsInput" class="btn" onclick="generarStats()">Generar</button>
+         
+          
+    </form>
+  </div>
+</body>
+<script src="../js/desplegable.js"></script>
+</html>
