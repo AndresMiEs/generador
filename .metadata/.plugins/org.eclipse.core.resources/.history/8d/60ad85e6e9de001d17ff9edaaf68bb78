@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generador de personajes</title>
+    <link rel="stylesheet" href="../css/generador.css" />
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/titulo.css" />
+    <link rel="stylesheet" href="../css/container-select.css" />
+  </head>
+  <body>
+    <header class="nav-container" id="main-header">
+      <nav class="main-menu">
+        <div class="menu-icon" id="menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul id="menu">
+        <li><a href="C:\Users\Mandr\OneDrive\Escritorio\Programas\generadorPj\src\main\resources\static\html\Main.html">Inicio</a></li>
+        <li><a href="http://localhost:8080/">Generador de personajes</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="titulo">
+      <h1 class="Forja">Generador de Personajes</h1>
+    </div>
+    <div class="container">
+      <div class="container-btn">
+        <label>Aquí puedes generar un personaje completamente Aleatorio</label>
+        <button class="btn" onclick="window.location.href='/mostrarPersonajeAleatorio'">
+          Generar Personaje Aleatorio
+        </button>
+      </div>
+      <div class="container-select">
+        <label>Si lo prefieres, puedes seleccionar la raza de tu personaje</label>
+        <select id="raza" name="raza">
+          <option value="Humano">Humano</option>
+          <option value="Enano">Enano</option>
+          <option value="Mediano">Mediano</option>
+          <option value="Alto Elfo">Alto Elfo</option>
+          <option value="Elfo Silvano">Elfo Silvano</option>
+          <option value="Gnomo">Gnomo</option>
+        </select>
+        <button
+          class="btn"
+          onclick="window.location.href='/mostrarPersonajePorRaza?raza=' + document.getElementById('raza').value;"
+        >
+          Generar Personaje
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

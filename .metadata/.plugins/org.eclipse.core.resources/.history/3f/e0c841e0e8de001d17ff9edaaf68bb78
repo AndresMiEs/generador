@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mi Generador de Personajes de Warhammer</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/Hero.css" />
+    <link rel="stylesheet" href="../css/Hero.css" />
+    <link rel="stylesheet" href="../css/Hero.css" />
+  </head>
+  <body>
+    <header class="nav-container" id="main-header">
+      <nav class="main-menu">
+        <div class="menu-icon" id="menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul id="menu">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Generador de personajes</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Bienvenido al Generador de Personajes de Warhammer</h1>
+        <p>¿Listo para crear tu personaje?</p>
+        <a href="#" class="btn">Crear Personaje</a>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="feature">
+        <i class="fas fa-dice"></i>
+        <h3>Generador de Atributos</h3>
+        <p>Crea tus atributos aleatoriamente con un solo click</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-users"></i>
+        <h3>Selecciona tu Raza y Profesión</h3>
+        <p>Elige entre una amplia selección de razas y profesiones para personalizar tu personaje</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Generador de Equipo</h3>
+        <p>Crea tu equipo de forma aleatoria o selecciona los objetos que quieras para darle un toque personalizado a tu personaje</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>Generador de Personajes de Warhammer &copy; 2023</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

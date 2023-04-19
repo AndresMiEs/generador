@@ -1,0 +1,49 @@
+package com.generador.controlador;
+
+import java.io.IOException;
+import java.nio.file.Files;
+
+import org.apache.log4j.Logger;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.ResourceLoader;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class GeneradorController {
+
+    private static final Logger logger = Logger.getLogger(GeneradorController.class);
+
+    private final ResourceLoader resourceLoader;
+
+    //Constructor que recibe un objeto ResourceLoader
+    public GeneradorController(ResourceLoader resourceLoader) {
+        this.resourceLoader = resourceLoader;
+    }
+
+    // Método que atiende las solicitudes GET en la raíz de la aplicación
+    @GetMapping("/")
+    public ResponseEntity<byte[]> getGenerador() throws IOException {
+
+        logger.info("Solicitud GET recibida en la raíz de la aplicación");
+
+        // Cargamos el archivo Generador.html desde el directorio /static/html de la aplicación
+        Resource resource = resourceLoader.getResource("classpath:static/html/index.html");
+
+        logger.info("Cargando archivo index.html");
+
+        // Leemos todo el contenido del archivo en un arreglo de bytes y creamos los encabezados de la respuesta Http
+        byte[] content = Files.readAllBytes(resource.getFile().toPath());
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.TEXT_HTML);
+
+        logger.info("Archivo index.html cargado correctamente");
+
+        // Devolvemos la respuesta HTTP con el contenido del archivo Generador.html
+        return new ResponseEntity<>(content, headers, HttpStatus.OK);
+    }
+}
